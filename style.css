@@ -1676,3 +1676,16 @@ img {
 /* ====== The End ====== */
 
 /*# sourceMappingURL=style.css.map */
+
+
+.casos{
+  position: relative;
+  left: 180px;
+  font-size: 25px;
+}
+
+.selec{
+  position: relative;
+  left: 240px;
+  font-size: 18px;
+}
