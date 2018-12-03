@@ -17,6 +17,89 @@
     <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css">
 
+
+        <script type="text/javascript">
+
+            function compare(array1,array2)
+            {
+
+
+                    //const arr1= [5,5,6];
+
+                    //const arr2= [3,7,4];
+                    const arrayN=[];
+                  
+                  
+                        for(i=0;i<=2;i++){
+                            a = array1[i];
+                            b = array2[i];
+
+                            arrayN[i] = Math.min(a,b);
+                            
+                        }
+                        //document.write(arrayN);
+                        //return arrayN;
+                        return arrayN.reduce(add,0);
+
+            }
+
+            function add(a, b) {
+
+                return a + b;
+
+            }
+
+            function compararTodos(){
+
+                //aqui definiremos todos los arrays de las enfermedades, y  con cada uno de ellos mandaremos llamar a la funcion "compare", pasandole como primer parametro
+                //nuestro array de usuario, el cual recuperaremos con document get element by id desde esta funcion, una vez definido este array desde aqui, lo pasaremos como parametro junto con los demas arrays de las enfermedades
+                    var a = document.getElementById ("nivelColesterol");
+                    var colesterol = a.options[a.selectedIndex].value;
+
+                    var b = document.getElementById ("nivelAcido");
+                    var acido = b.options[b.selectedIndex].value;
+
+                    var c = document.getElementById ("nivelTrigliceridos");
+                    var trigliceridos = c.options[c.selectedIndex].value;
+
+                    var d = document.getElementById ("nivelPresionSistolica");
+                    var presionSis = d.options[d.selectedIndex].value;
+
+                    var e = document.getElementById ("nivelPresionDiastolica");
+                    var presionDias = e.options[e.selectedIndex].value;
+
+                    var f = document.getElementById ("nivelEstres");
+                    var estres = f.options[f.selectedIndex].value;
+
+                    var g = document.getElementById ("nivelDesordenesAlimenticios");
+                    var desordenAlimenticio = g.options[g.selectedIndex].value;
+
+                     var h = document.getElementById ("nivelConsumoSal");
+                    var sal = h.options[h.selectedIndex].value;
+
+                    var i = document.getElementById ("nivelFumar");
+                    var fumar = i.options[i.selectedIndex].value;
+
+                    var j = document.getElementById ("nivelDeportes");
+                    var deportes = j.options[j.selectedIndex].value;
+
+                    var k = document.getElementById ("nivelAlcohol");
+                    var alcohol = k.options[k.selectedIndex].value;
+
+                    var l = document.getElementById ("nivelMolestias");
+                    var molestias = l.options[l.selectedIndex].value;
+
+                misSintomas = [colesterol,acido,trigliceridos,presionSis,presionDias,estres,desordenAlimenticio,sal,fumar,deportes,alcohol,molestias];
+
+                //aqui iran dfinidos los array sde las enfermedades del excel
+
+                //compare(misSintomas, enfermedad1)
+
+            }
+
+
+</script>
+
 </head>
 
 <body>
@@ -143,7 +226,7 @@
                                         <br><br>
 
                                         <h5 class="casos">Niveles de colesterol:</h5>
-                                        <select class="selec">
+                                        <select class="selec" id="nivelColesterol">
                                             <option value="0" class="val">Se desconoce el tipo de colesterol</option>
                                             <option value="0.15" class="val">Colesterol HDL:  40mg/dl</option>
                                             <option value="0.6" class="val">Colesterol LDL: 100mg/dl</option>
@@ -154,7 +237,7 @@
                                         <br><br>
 
                                         <h5 class="casos">Niveles de acido urico en la sangre:</h5>
-                                        <select class="selec">
+                                        <select class="selec" id="nivelAcido">
                                             <option value="0" class="val">1 a 3 mg/dL</option>
                                             <option value="0" class="val">3 a 5 mg/dL</option>
                                             <option value="0" class="val">5 a 7 mg/dL</option>
@@ -163,7 +246,7 @@
                                         <br><br>
 
                                         <h5 class="casos">Niveles de trigliceridos:</h5>
-                                        <select class="selec">
+                                        <select class="selec" id="nivelTrigliceridos">
                                             <option value="0" class="val">Menor de 150 mg/dL</option>
                                             <option value="0.15" class="val">150 a 199 mg/dL</option>
                                             <option value="0.3" class="val">200 a 499 mg/dL</option>
@@ -172,7 +255,7 @@
                                         <br><br>
 
                                         <h5 class="casos">Presion sistólica:</h5>
-                                        <select class="selec">
+                                        <select class="selec" id="nivelPresionSistolica">
                                             <option value="0" class="val"> 100 - 120</option>
                                             <option value="0.5" class="val"> 120 - 129 </option>
                                             <option value="0.1" class="val"> 130 - 139</option>
@@ -183,7 +266,7 @@
                                         <br><br>
 
                                         <h5 class="casos">Presion diastólica</h5>
-                                        <select class="selec">
+                                        <select class="selec" id="nivelPresionDiastolica">
                                             <option value="0" class="val">60 - 80</option>
                                             <option value="0.1" class="val">80 - 84</option>
                                             <option value="0.2" class="val">85 - 89</option>
@@ -194,7 +277,7 @@
                                         <br><br>
 
                                         <h5 class="casos">Padece de algun tipo de estres:</h5>
-                                        <select class="selec">
+                                        <select class="selec" id="nivelEstres">
                                             <option value="0.4" class="val">Estrés agudo</option>
                                             <option value="0.35" class="val">Estrés agudo episódico</option>
                                             <option value="0.2" class="val">Estrés crónico</option>
@@ -204,7 +287,7 @@
                                         <br><br>
 
                                         <h5 class="casos">Padese de desordenes alimenticios:</h5>
-                                        <select class="selec">
+                                        <select class="selec" id="nivelDesordenesAlimenticios">
                                             <option value="0.1" class="val">Anorexia</option>
                                             <option value="0.35" class="val">Bulimia</option>
                                             <option value="0.2" class="val">Comer de manera compulsiva</option>
@@ -212,7 +295,7 @@
                                         <br><br>
 
                                         <h5 class="casos">Consumo de sal en los alimentos a la semana:</h5>
-                                        <select class="selec">
+                                        <select class="selec" id="nivelConsumoSal">
                                             <option value="0" class="val">No se le agrega a ningun tipo de comida</option>
                                             <option value="0.1" class="val">Solo la sal necesaria para el platillo</option>
                                             <option value="0.15" class="val">Saborizar los alimentos</option>
@@ -222,7 +305,7 @@
                                         <br><br>
 
                                         <h5 class="casos">Frecuencia con el que fumas a la semana:</h5>
-                                        <select class="selec">
+                                        <select class="selec" id="nivelFumar">
                                             <option value="0" class="val">No fumo</option>
                                             <option value="0.05" class="val">01 - 07 cigarrillos</option>
                                             <option value="0.1" class="val">07 - 14 cigarrillos</option>
@@ -238,7 +321,7 @@
                                         <br><br>
 
                                         <h5 class="casos">Frecuencia con el que se practica deportes a la semana:</h5>
-                                        <select class="selec">
+                                        <select class="selec" id="nivelDeportes">
                                             <option value="0.25" class="val">No hago ejercicio</option>
                                             <option value="0.1" class="val">01 - 02 horas</option>
                                             <option value="0.05" class="val">02 - 04 horas</option>
@@ -251,7 +334,7 @@
                                         <br><br>
 
                                         <h5 class="casos">Frecuencia con el que consumes bebidas alcoholicas:</h5>
-                                        <select class="selec">
+                                        <select class="selec" id="nivelAlcohol">
                                             <option value="0" class="val">No consumo alcohol</option>
                                             <option value="0.05" class="val">Una a dos veces a la semana</option>
                                             <option value="0.1" class="val">Tres a cuatro veces a la semana</option>
@@ -262,7 +345,7 @@
                                         <br><br>
 
                                         <h5 class="casos">Molestias en extremidades:</h5>
-                                        <select class="selec">
+                                        <select class="selec" id="nivelMolestias">
                                             <option value="0" class="val">Ninguna</option>
                                             <option value="0.1" class="val">Brazo derecho</option>
                                             <option value="0.3" class="val">Brazo izquierdo</option>
@@ -273,7 +356,7 @@
 
 
                                         <div class="oneMusic-buttons-area mb-100 align-items-center justify-content-center d-flex">
-                                            <a href="#" class="btn oneMusic-btn m-2">Mostrar Resultados <i class="fa fa-angle-double-right"></i></a>
+                                            <a href="#" onclick="compararTodos();" class="btn oneMusic-btn m-2">Mostrar Resultados <i class="fa fa-angle-double-right"></i></a>
                                         </div>
 
                                     </div>
