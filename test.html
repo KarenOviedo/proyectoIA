@@ -32,7 +32,7 @@
                     const arrayN=[];
                   
                   
-                        for(i=0;i<=2;i++){
+                        for(i=0;i<=14;i++){
                             a = array1[i];
                             b = array2[i];
 
@@ -55,6 +55,16 @@
 
                 //aqui definiremos todos los arrays de las enfermedades, y  con cada uno de ellos mandaremos llamar a la funcion "compare", pasandole como primer parametro
                 //nuestro array de usuario, el cual recuperaremos con document get element by id desde esta funcion, una vez definido este array desde aqui, lo pasaremos como parametro junto con los demas arrays de las enfermedades
+                    var aa = document.getElementById ("generoPaciente");
+                    var genero = aa.options[aa.selectedIndex].value;
+
+                    var bb = document.getElementById ("edadPaciente");
+                    var edad = bb.options[bb.selectedIndex].value;
+
+                    var cc = document.getElementById ("pesoPaciente");
+                    var peso = cc.options[cc.selectedIndex].value;
+
+
                     var a = document.getElementById ("nivelColesterol");
                     var colesterol = a.options[a.selectedIndex].value;
 
@@ -91,19 +101,32 @@
                     var l = document.getElementById ("nivelMolestias");
                     var molestias = l.options[l.selectedIndex].value;
 
-                misSintomas = [colesterol,acido,trigliceridos,presionSis,presionDias,estres,desordenAlimenticio,sal,fumar,deportes,alcohol,molestias];
+                misSintomas = [genero,edad,peso,colesterol,acido,trigliceridos,presionSis,presionDias,estres,desordenAlimenticio,sal,fumar,deportes,alcohol,molestias];
 
-                //     const arrar1=[0.15,1.6,1,0.4,0.3,0.45,0.35,0.35,0.15,0.7,0.25,0.2,0.5];
-                    // const arrar2=[0.15,1.6,1,0.4,0.3,0.45,0.35,0.2,0.15,0.7,0.25,0.2,0.5];
-                    // const arrar3=[0.15,1.6,1,0.6,0.3,0.3,0.35,0.15,0.25,0.7,0.25,0.3,0.5];
-                    // const arrar4=[0.15,1.6,1,0.45,0.3,0.15,0.2,0.2,0.25,0.2,0.25,0.2,0.5];
-                    // const arrar5=[0.15,1.6,1,0.3,0,0.3,0.2,0.15,0.15,0.4,0.25,0.4,0.5];
-                    // const arrar6=[0.15,1.6,1,0.3,0,0.15,0.1,0.35,0.15,0.1,0.25,0.1,0];
-                    // const arrar7=[0.15,1.6,1,0.15,0,0.15,0.1,0.2,0.1,0,0.05,0.1,0];
-                    // const arrar8=[0.15,1.6,1,0.3,0,0.3,0.2,0,0.1,0.2,0.25,0.15,0.5];
-                    // const arrar9=[0.15,0.16,0.2,0,0,0.15,0.1,0.15,0.15,0.2,0,0.1,0.3];
-                    // const arrar10=[0.15,1.6,0.74,0,0,0,0,0,0,0,0.25,0,0];
-
+                    const arrar1=[0.15,1.6,1,0.4,0.3,0.45,0.35,0.6,0.35,0.3,0.15,0.7,0.25,0.2,0.5];
+                    const arrar2=[0.15,1.6,1,0.4,0.3,0.45,0.35,0.6,0.2,0.3,0.15,0.7,0.25,0.2,0.5];
+                    const arrar3=[0.15,1.6,1,0.6,0.3,0.3,0.35,0.6,0.15,0.3,0.25,0.7,0.25,0.3,0.5];
+                    const arrar4=[0.15,1.6,1,0.45,0.3,0.15,0.2,0.6,0.2,0.35,0.25,0.2,0.25,0.2,0.5];
+                    const arrar5=[0.15,1.6,1,0.3,0,0.3,0.2,0.6,0.15,0.35,0.15,0.4,0.25,0.4,0.5];
+                    const arrar6=[0.15,1.6,1,0.3,0,0.15,0.1,0.6,0.35,0,0.15,0.1,0.25,0.1,0];
+                    const arrar7=[0.15,1.6,1,0.15,0,0.15,0.1,0.6,0.2,0.1,0.1,0,0.05,0.1,0];
+                    const arrar8=[0.15,1.6,1,0.3,0,0.3,0.2,0.6,0,0,0.1,0.2,0.25,0.15,0.5];
+                    const arrar9=[0.15,1.6,1,0.15,0.3,0.15,0.1,0.6,0.15,0,0.15,0.2,0.25,0.1,0.3];
+                    const arrar10=[0.15,0.16,0.2,0,0,0,0,0.05,0,0,0,0,0.25,0,0];
+                    
+                    //aa=[1,2,3];
+                    //b=[2,1,1]
+                   
+                    alert(compare(misSintomas,arrar1));
+                    alert(compare(misSintomas,arrar2));
+                    alert(compare(misSintomas,arrar3));
+                    alert(compare(misSintomas,arrar4));
+                    alert(compare(misSintomas,arrar5));
+                    alert(compare(misSintomas,arrar6));
+                    alert(compare(misSintomas,arrar7));
+                    alert(compare(misSintomas,arrar8));
+                    alert(compare(misSintomas,arrar9));
+                    alert(compare(misSintomas,arrar10));
                 //aqui iran dfinidos los array sde las enfermedades del excel
 
                 //compare(misSintomas, enfermedad1)
@@ -224,19 +247,40 @@
                                 <div class="oneMusic-tab-content">
                                     <!-- Contenido -->
                                     <div class="oneMusic-tab-text">
-                                        <h5 class="casos">Genero del paciente:</h5>
+                                        
+                                        <!--<h5 class="casos">Genero del paciente:</h5>
                                         <form action="" class="selec">
-                                                <input type="radio" name="gender" value="0.4">Femenino
-                                                <input type="radio" name="gender" value="0.15">Masculino
+                                                <input type="radio" name="gender" id="genero" value="0.15">Femenino
+                                                <input type="radio" name="gender" value="0.15">Masculino 
                                         </form>
+                                        <br><br>-->
+                                        <h5 class="casos">Genero del paciente:</h5>
+                                        <select class="selec" id="generoPaciente">
+                                            <option value="0.15" class="val">Femenino</option>
+                                            <option value="0.15" class="val">Masculino</option>
+                                        </select>
                                         <br><br>
 
-                                        <h5 class="casos">Edad del paciente:</h5>
-                                            <input class="selec" type="text" name="edad" value="1.6">
+
+                                        <h5 class="casos">Edad del paciente</h5>
+                                        <select class="selec" id="edadPaciente">
+                                            <option value="0.16" class="val">Menor o igual a 4 años</option>
+                                            <option value="1" class="val">Mayor a 4 años</option>
+                                        </select>
                                         <br><br>
                                         
-                                        <h5 class="casos">Peso del paciente (En kilogramos):</h5>
-                                        <input class="selec" type="text" name="peso" value="">
+                                        <h5 class="casos">Peso del paciente (en kilogramos):</h5>
+                                        <select class="selec" id="pesoPaciente">
+                                            <option value="0.2" class="val">Menos de 30kg (niños)</option>
+                                            <option value="0.35" class="val">Entre 30 y 40kg</option>
+                                            <option value="0.45" class="val">Entre 40 y 50kg</option>
+                                            <option value="0.55" class="val">Entre 50 y 60kg</option>
+                                            <option value="0.65" class="val">Entre 60 y 70kg</option>
+                                            <option value="0.74" class="val">Entre 70 y 80kg</option>
+                                            <option value="0.85" class="val">Entre 80 y 90kg</option>
+                                            <option value="0.95" class="val">Entre 90 y 100kg</option>
+                                            <option value="1" class="val">Más de 100kg</option>
+                                        </select>
                                         <br><br>
 
                                         <h5 class="casos">Niveles de colesterol:</h5>
@@ -281,12 +325,12 @@
 
                                         <h5 class="casos">Presion diastólica</h5>
                                         <select class="selec" id="nivelPresionDiastolica">
-                                            <option value="0" class="val">60 - 80</option>
-                                            <option value="0.1" class="val">80 - 84</option>
-                                            <option value="0.2" class="val">85 - 89</option>
-                                            <option value="0.3" class="val">90 - 99</option>
-                                            <option value="0.45" class="val">100 - 109</option>
-                                            <option value="0.6" class="val">110 - ++</option>
+                                            <option value="0.05" class="val">60 - 80</option>
+                                            <option value="0.15" class="val">80 - 84</option>
+                                            <option value="0.3" class="val">85 - 89</option>
+                                            <option value="0.6" class="val">90 - 99</option>
+                                            <option value="0.85" class="val">100 - 109</option>
+                                            <option value="1" class="val">110 - ++</option>
                                         </select>
                                         <br><br>
 
