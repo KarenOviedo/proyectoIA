@@ -1689,3 +1689,9 @@ img {
   left: 240px;
   font-size: 18px;
 }
+
+.check{
+  position: relative;
+  left: 240px;
+  font-size: 25px;
+}
