@@ -20,25 +20,6 @@
 
         <script type="text/javascript">
 
-          $("input:checkbox").change(function() {
-
-            var someObj = {};
-            someObj.fruitsGranted = [];
-            someObj.fruitsDenied = [];
-
-            $("input:checkbox").each(function() {
-                if ($(this).is(":checked")) {
-                    someObj.fruitsGranted.push($(this).attr("id"));
-                } else {
-                    someObj.fruitsDenied.push($(this).attr("id"));
-                }
-            });
-
-            alert("GRANTED: " + someObj.fruitsGranted);
-            alert("DENIED: " + someObj.fruitsDenied);
-        });
-
-
 
 
             function compare(array1,array2)
@@ -446,8 +427,6 @@
                     var l = document.getElementById ("nivelMolestias");
                     var molestias = l.options[l.selectedIndex].value;
 
-                    var lol = document.getElementById ("enfermedadComparar");
-                    var enfermedadseleccionada = lol.options[lol.selectedIndex].value;
 
                 misSintomas = [genero,edad,peso,colesterol,acido,trigliceridos,presionSis,presionDias,estres,desordenAlimenticio,sal,fumar,deportes,alcohol,molestias];
             }
@@ -513,16 +492,13 @@
             }
             function holis(){
                 if($('.che1').is(':checked')){
-                    alert("Holi");
                     comparar1();
-                }
-                if($('.che2').is(':checked')){
+                }else if($('.che2').is(':checked')){
                     comparar2();
-                }
-                if($('.che3').is(':checked')){
+                }else if($('.che3').is(':checked')){
+                    alert("ta");
                     comparar3();
-                }
-                if($('.che4').is(':checked')){
+                }else if($('.che4').is(':checked')){
                     comparar4();
                 }
                 if($('.che5').is(':checked')){
