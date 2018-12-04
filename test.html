@@ -359,77 +359,7 @@
 
                 
 
-                    function misResultados(){
-
-                    var aa = document.getElementById ("generoPaciente2");
-                    var genero2 = aa.options[aa.selectedIndex].value;
-                    var bb2 = document.getElementById ("edadPaciente2");
-                    var edad2 = bb.options[bb.selectedIndex].value;
-                    var cc = document.getElementById ("pesoPaciente2");
-                    var peso2 = cc.options[cc.selectedIndex].value;
-                    var a = document.getElementById ("nivelColesterol2");
-                    var colesterol2 = a.options[a.selectedIndex].value;
-                    var b = document.getElementById ("nivelAcido2");
-                    var acido2 = b.options[b.selectedIndex].value;
-                    var c = document.getElementById ("nivelTrigliceridos2");
-                    var trigliceridos2 = c.options[c.selectedIndex].value;
-                    var d = document.getElementById ("nivelPresionSistolica2");
-                    var presionSis2 = d.options[d.selectedIndex].value;
-                    var e = document.getElementById ("nivelPresionDiastolica2");
-                    var presionDias2 = e.options[e.selectedIndex].value;
-                    var f = document.getElementById ("nivelEstres2");
-                    var estres2 = f.options[f.selectedIndex].value;
-                    var g = document.getElementById ("nivelDesordenesAlimenticios2");
-                    var desordenAlimenticio2 = g.options[g.selectedIndex].value;
-                    var h = document.getElementById ("nivelConsumoSal2");
-                    var sal2 = h.options[h.selectedIndex].value;
-                    var i = document.getElementById ("nivelFumar2");
-                    var fumar2 = i.options[i.selectedIndex].value;
-                    var j = document.getElementById ("nivelDeportes2");
-                    var deportes2 = j.options[j.selectedIndex].value;
-                    var k = document.getElementById ("nivelAlcohol2");
-                    var alcohol2 = k.options[k.selectedIndex].value;
-                    var l = document.getElementById ("nivelMolestias2");
-                    var molestias2 = l.options[l.selectedIndex].value;
-                misSintomas = [genero2,edad2,peso2,colesterol2,acido2,trigliceridos2,presionSis2,presionDias2,estres2,desordenAlimenticio2,sal2,fumar2,deportes2,alcohol2,molestias2];
-            }
-                function comparar1(){
-                    const arrar1=[0.15,1.6,1,0.4,0.3,0.45,0.35,0.6,0.35,0.3,0.15,0.7,0.25,0.2,0.5];
-                    alert(compare(misSintomas,arrar1));
-
-            }
-            function holis(){
-                if($('.che1').is(':checked')){
-                    comparar1();
-                }
-                if($('.che2').is(':checked')){
-                    alert(compare(misSintomas,arra2));
-                }
-                if($('.che3').is(':checked')){
-                    alert(compare(misSintomas,arra3));
-                }
-                if($('.che4').is(':checked')){
-                    alert(compare(misSintomas,arra4));
-                }
-                if($('.che5').is(':checked')){
-                    alert(compare(misSintomas,arra5));
-                }
-                if($('.che6').is(':checked')){
-                    alert(compare(misSintomas,arra6));
-                }
-                if($('.che7').is(':checked')){
-                    alert(compare(misSintomas,arra7));
-                }
-                if($('.che8').is(':checked')){
-                    alert(compare(misSintomas,arra8));
-                }
-                if($('.che9').is(':checked')){
-                    alert(compare(misSintomas,arra9));
-                }
-                if($('.che10').is(':checked')){
-                    alert(compare(misSintomas,arra10));
-                }
-            }
+                    
                     
                   
                    
@@ -446,6 +376,153 @@
             function activaTab(tab){
     			$('.nav-link a[href="enfermedades.html' + tab + '"]').tab('show');
 			};
+
+            function misResultados(){
+
+                                    var aa = document.getElementById ("generoPaciente");
+                    var genero = aa.options[aa.selectedIndex].value;
+
+                    var bb = document.getElementById ("edadPaciente");
+                    var edad = bb.options[bb.selectedIndex].value;
+
+                    var cc = document.getElementById ("pesoPaciente");
+                    var peso = cc.options[cc.selectedIndex].value;
+
+
+                    var a = document.getElementById ("nivelColesterol");
+                    var colesterol = a.options[a.selectedIndex].value;
+
+                    var b = document.getElementById ("nivelAcido");
+                    var acido = b.options[b.selectedIndex].value;
+
+                    var c = document.getElementById ("nivelTrigliceridos");
+                    var trigliceridos = c.options[c.selectedIndex].value;
+
+                    var d = document.getElementById ("nivelPresionSistolica");
+                    var presionSis = d.options[d.selectedIndex].value;
+
+                    var e = document.getElementById ("nivelPresionDiastolica");
+                    var presionDias = e.options[e.selectedIndex].value;
+
+                    var f = document.getElementById ("nivelEstres");
+                    var estres = f.options[f.selectedIndex].value;
+
+                    var g = document.getElementById ("nivelDesordenesAlimenticios");
+                    var desordenAlimenticio = g.options[g.selectedIndex].value;
+
+                     var h = document.getElementById ("nivelConsumoSal");
+                    var sal = h.options[h.selectedIndex].value;
+
+                    var i = document.getElementById ("nivelFumar");
+                    var fumar = i.options[i.selectedIndex].value;
+
+                    var j = document.getElementById ("nivelDeportes");
+                    var deportes = j.options[j.selectedIndex].value;
+
+                    var k = document.getElementById ("nivelAlcohol");
+                    var alcohol = k.options[k.selectedIndex].value;
+
+                    var l = document.getElementById ("nivelMolestias");
+                    var molestias = l.options[l.selectedIndex].value;
+
+                    var lol = document.getElementById ("enfermedadComparar");
+                    var enfermedadseleccionada = lol.options[lol.selectedIndex].value;
+
+                misSintomas = [genero,edad,peso,colesterol,acido,trigliceridos,presionSis,presionDias,estres,desordenAlimenticio,sal,fumar,deportes,alcohol,molestias];
+            }
+                function comparar1(){
+                    misResultados();
+                    const arrar1=[0.15,1.6,1,0.4,0.3,0.45,0.35,0.6,0.35,0.3,0.15,0.7,0.25,0.2,0.5];
+                    alert(compare(misSintomas,arrar1));
+
+            }
+                function comparar2(){
+                    misResultados();
+                    const arrar2=[0.15,1.6,1,0.4,0.3,0.45,0.35,0.6,0.2,0.3,0.15,0.7,0.25,0.2,0.5];
+                    alert(compare(misSintomas,arrar2));
+
+            }
+                function comparar3(){
+                    misResultados();
+                    const arrar3=[0.15,1.6,1,0.6,0.3,0.3,0.35,0.6,0.15,0.3,0.25,0.7,0.25,0.3,0.5];
+                    alert(compare(misSintomas,arrar3));
+
+            }
+                function comparar4(){
+                    misResultados();
+                    const arrar4=[0.15,1.6,1,0.45,0.3,0.15,0.2,0.6,0.2,0.35,0.25,0.2,0.25,0.2,0.5];
+                    alert(compare(misSintomas,arrar4));
+
+            }
+                function comparar5(){
+                    misResultados();
+                    const arrar5=[0.15,1.6,1,0.3,0,0.3,0.2,0.6,0.15,0.35,0.15,0.4,0.25,0.4,0.5];
+                    alert(compare(misSintomas,arrar5));
+
+            }
+                function comparar6(){
+                    misResultados();
+                    const arrar6=[0.15,1.6,1,0.3,0,0.15,0.1,0.6,0.35,0,0.15,0.1,0.25,0.1,0];
+                    alert(compare(misSintomas,arrar6));
+
+            }
+                function comparar7(){
+                    misResultados();
+                    const arrar7=[0.15,1.6,1,0.15,0,0.15,0.1,0.6,0.2,0.1,0.1,0,0.05,0.1,0];
+                    alert(compare(misSintomas,arrar7));
+
+            }
+                function comparar8(){
+                    misResultados();
+                    const arrar8=[0.15,1.6,1,0.3,0,0.3,0.2,0.6,0,0,0.1,0.2,0.25,0.15,0.5];
+                    alert(compare(misSintomas,arrar8));
+
+            }
+                function comparar9(){
+                    misResultados();
+                    const arrar9=[0.15,1.6,1,0.15,0.3,0.15,0.1,0.6,0.15,0,0.15,0.2,0.25,0.1,0.3];
+                    alert(compare(misSintomas,arrar9));
+
+            }
+                function comparar10(){
+                    misResultados();
+                    const arrar10=[0.15,0.16,0.2,0,0,0,0,0.05,0,0,0,0,0.25,0,0];
+                    alert(compare(misSintomas,arrar10));
+
+            }
+            function holis(){
+                if($('.che1').is(':checked')){
+                    alert("Holi");
+                    comparar1();
+                }
+                if($('.che2').is(':checked')){
+                    comparar2();
+                }
+                if($('.che3').is(':checked')){
+                    comparar3();
+                }
+                if($('.che4').is(':checked')){
+                    comparar4();
+                }
+                if($('.che5').is(':checked')){
+                    comparar5();
+                }
+                if($('.che6').is(':checked')){
+                    comparar6();
+                }
+                if($('.che7').is(':checked')){
+                    comparar7();
+                }
+                if($('.che8').is(':checked')){
+                    comparar8();
+                }
+                if($('.che9').is(':checked')){
+                    comparar9();
+                }
+                if($('.che10').is(':checked')){
+                    comparar10();
+                }
+            }
 
 </script>
 
@@ -782,8 +859,6 @@
                                         </div>                                        
                                         <br><br>
 
-                                        
-
 										<h5 class="casos">Genero del paciente:</h5>
                                         <select class="selec" id="generoPaciente">
                                             <option value="0.15" class="val">Femenino</option>
@@ -944,7 +1019,7 @@
 
 
                                         <div class="oneMusic-buttons-area mb-100 align-items-center justify-content-center d-flex">
-                                            <a href="#" onclick="compararUno();" class="btn oneMusic-btn m-2">Mostrar Resultados <i class="fa fa-angle-double-right"></i></a>
+                                            <a href="#" onclick="holis();" class="btn oneMusic-btn m-2">Mostrar Resultados <i class="fa fa-angle-double-right"></i></a>
                                         </div>
 
                                     </div>
