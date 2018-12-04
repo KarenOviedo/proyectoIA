@@ -359,7 +359,77 @@
 
                 
 
-                    
+                    function misResultados(){
+
+                    var aa = document.getElementById ("generoPaciente2");
+                    var genero2 = aa.options[aa.selectedIndex].value;
+                    var bb2 = document.getElementById ("edadPaciente2");
+                    var edad2 = bb.options[bb.selectedIndex].value;
+                    var cc = document.getElementById ("pesoPaciente2");
+                    var peso2 = cc.options[cc.selectedIndex].value;
+                    var a = document.getElementById ("nivelColesterol2");
+                    var colesterol2 = a.options[a.selectedIndex].value;
+                    var b = document.getElementById ("nivelAcido2");
+                    var acido2 = b.options[b.selectedIndex].value;
+                    var c = document.getElementById ("nivelTrigliceridos2");
+                    var trigliceridos2 = c.options[c.selectedIndex].value;
+                    var d = document.getElementById ("nivelPresionSistolica2");
+                    var presionSis2 = d.options[d.selectedIndex].value;
+                    var e = document.getElementById ("nivelPresionDiastolica2");
+                    var presionDias2 = e.options[e.selectedIndex].value;
+                    var f = document.getElementById ("nivelEstres2");
+                    var estres2 = f.options[f.selectedIndex].value;
+                    var g = document.getElementById ("nivelDesordenesAlimenticios2");
+                    var desordenAlimenticio2 = g.options[g.selectedIndex].value;
+                    var h = document.getElementById ("nivelConsumoSal2");
+                    var sal2 = h.options[h.selectedIndex].value;
+                    var i = document.getElementById ("nivelFumar2");
+                    var fumar2 = i.options[i.selectedIndex].value;
+                    var j = document.getElementById ("nivelDeportes2");
+                    var deportes2 = j.options[j.selectedIndex].value;
+                    var k = document.getElementById ("nivelAlcohol2");
+                    var alcohol2 = k.options[k.selectedIndex].value;
+                    var l = document.getElementById ("nivelMolestias2");
+                    var molestias2 = l.options[l.selectedIndex].value;
+                misSintomas = [genero2,edad2,peso2,colesterol2,acido2,trigliceridos2,presionSis2,presionDias2,estres2,desordenAlimenticio2,sal2,fumar2,deportes2,alcohol2,molestias2];
+            }
+                function comparar1(){
+                    const arrar1=[0.15,1.6,1,0.4,0.3,0.45,0.35,0.6,0.35,0.3,0.15,0.7,0.25,0.2,0.5];
+                    alert(compare(misSintomas,arrar1));
+
+            }
+            function holis(){
+                if($('.che1').is(':checked')){
+                    comparar1();
+                }
+                if($('.che2').is(':checked')){
+                    alert(compare(misSintomas,arra2));
+                }
+                if($('.che3').is(':checked')){
+                    alert(compare(misSintomas,arra3));
+                }
+                if($('.che4').is(':checked')){
+                    alert(compare(misSintomas,arra4));
+                }
+                if($('.che5').is(':checked')){
+                    alert(compare(misSintomas,arra5));
+                }
+                if($('.che6').is(':checked')){
+                    alert(compare(misSintomas,arra6));
+                }
+                if($('.che7').is(':checked')){
+                    alert(compare(misSintomas,arra7));
+                }
+                if($('.che8').is(':checked')){
+                    alert(compare(misSintomas,arra8));
+                }
+                if($('.che9').is(':checked')){
+                    alert(compare(misSintomas,arra9));
+                }
+                if($('.che10').is(':checked')){
+                    alert(compare(misSintomas,arra10));
+                }
+            }
                     
                   
                    
@@ -686,6 +756,33 @@
                                             <option value="9" class="val">Enfermedad de kawasaki</option>
                                         </select>
                                         <br><br>
+
+
+                                        <h5 class="casos">Enfermedad que se quiere comparar</h5>
+                                        <div class="check">
+                                        <input class="che1" type="checkbox" name="gender" value="6.7">Tromboembolismo pulmonar
+                                        <br>
+                                        <input class="chec2" type="checkbox" name="gender" value="6.55">Sindrome de miocardio
+                                        <br>
+                                        <input class="chec3" type="checkbox" name="gender" value="6.75">Cardiopatía isquémica
+                                        <br>
+                                        <input class="chec4" type="checkbox" name="gender" value="5.8">Amiloidosis
+                                        <br>
+                                        <input class="chec5" type="checkbox" name="gender" value="6">Insuficiencia cardiaca
+                                        <br>
+                                        <input class="chec6" type="checkbox" name="gender" value="4.25">Fibrilación aurricular
+                                        <br>
+                                        <input class="chec7" type="checkbox" name="gender" value="3.7">Arritmia
+                                        <br>
+                                        <input class="chec8" type="checkbox" name="gender" value="4.75">Sindrome de Marfan
+                                        <br>
+                                        <input class="chec9" type="checkbox" name="gender" value="4.35">Coartación de aorta
+                                        <br>
+                                        <input class="chec10" type="checkbox" name="gender" value="1.46">Enfermedad de kawasaki
+                                        </div>                                        
+                                        <br><br>
+
+                                        
 
 										<h5 class="casos">Genero del paciente:</h5>
                                         <select class="selec" id="generoPaciente">
