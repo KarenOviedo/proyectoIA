@@ -279,7 +279,7 @@
                   var opcion = indexOfMax(enfermedadScore);
                   var max = Math.max(...enfermedadScore);
                   if(max<=3.4){
-                    alert("No padeces de alguna enfermedad seleccionada");
+                    alert("No padeces de ninguna enfermedad");
                   }else if(max>=3.5){
                     switch(opcion){
                         case 0:
@@ -488,9 +488,9 @@
 
                   var opcion = indexOfMax(arrarMilagro);
                   var max = Math.max(...arrarMilagro);
-                  if(max<=1.25){
-                    alert("No padeces de ninguna enfermedad");
-                  }else if(max>=1.26){
+                  if(max<=3.4){
+                    alert("No padeces de alguna enfermedad seleccionada");
+                  }else if(max>=3.5){
                     switch(opcion){
                         case 0:
                         alert("Tromboembolismo pulmonar");
