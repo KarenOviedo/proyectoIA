@@ -20,6 +20,27 @@
 
         <script type="text/javascript">
 
+          $("input:checkbox").change(function() {
+
+            var someObj = {};
+            someObj.fruitsGranted = [];
+            someObj.fruitsDenied = [];
+
+            $("input:checkbox").each(function() {
+                if ($(this).is(":checked")) {
+                    someObj.fruitsGranted.push($(this).attr("id"));
+                } else {
+                    someObj.fruitsDenied.push($(this).attr("id"));
+                }
+            });
+
+            alert("GRANTED: " + someObj.fruitsGranted);
+            alert("DENIED: " + someObj.fruitsDenied);
+        });
+
+
+
+
             function compare(array1,array2)
             {
 
@@ -742,43 +763,30 @@
                                     <div class="oneMusic-tab-text">
                                        
 
-                                        <h5 class="casos">Enfermedad que se quiere comparar</h5>
-                                        <select class="selec" id="enfermedadComparar">
-                                        	<option value="0" class="val">seleccione enfermedad</option>
-                                            <option value="1" class="val">Tromboembolismo pulmonar</option>
-                                            <option value="2" class="val">Sindrome de miocardio</option>
-                                            <option value="3" class="val">Cardiopatía isquémica</option>
-                                            <option value="4" class="val">Amiloidosis</option>
-                                            <option value="5" class="val">Insuficiencia cardiaca</option>
-                                            <option value="6" class="val">Fibrilación aurricular</option>
-                                            <option value="7" class="val">Arritmia</option>
-                                            <option value="8" class="val">Sindrome de Marfan</option>
-                                            <option value="9" class="val">Enfermedad de kawasaki</option>
-                                        </select>
-                                        <br><br>
+                                     
 
 
                                         <h5 class="casos">Enfermedad que se quiere comparar</h5>
                                         <div class="check">
-                                        <input class="che1" type="checkbox" name="gender" value="6.7">Tromboembolismo pulmonar
+                                        <input class="che1" type="checkbox" id="arrar1" name="gender" value="6.7">Tromboembolismo pulmonar
                                         <br>
-                                        <input class="chec2" type="checkbox" name="gender" value="6.55">Sindrome de miocardio
+                                        <input class="chec2" type="checkbox" id="arrar2" name="gender" value="6.55">Sindrome de miocardio
                                         <br>
-                                        <input class="chec3" type="checkbox" name="gender" value="6.75">Cardiopatía isquémica
+                                        <input class="chec3" type="checkbox" id="arrar3" name="gender" value="6.75">Cardiopatía isquémica
                                         <br>
-                                        <input class="chec4" type="checkbox" name="gender" value="5.8">Amiloidosis
+                                        <input class="chec4" type="checkbox" id="arrar4" name="gender" value="5.8">Amiloidosis
                                         <br>
-                                        <input class="chec5" type="checkbox" name="gender" value="6">Insuficiencia cardiaca
+                                        <input class="chec5" type="checkbox" id="arrar5" name="gender" value="6">Insuficiencia cardiaca
                                         <br>
-                                        <input class="chec6" type="checkbox" name="gender" value="4.25">Fibrilación aurricular
+                                        <input class="chec6" type="checkbox" id="arrar6" name="gender" value="4.25">Fibrilación aurricular
                                         <br>
-                                        <input class="chec7" type="checkbox" name="gender" value="3.7">Arritmia
+                                        <input class="chec7" type="checkbox" id="arrar7" name="gender" value="3.7">Arritmia
                                         <br>
-                                        <input class="chec8" type="checkbox" name="gender" value="4.75">Sindrome de Marfan
+                                        <input class="chec8" type="checkbox" id="arrar8" name="gender" value="4.75">Sindrome de Marfan
                                         <br>
-                                        <input class="chec9" type="checkbox" name="gender" value="4.35">Coartación de aorta
+                                        <input class="chec9" type="checkbox" id="arrar9" name="gender" value="4.35">Coartación de aorta
                                         <br>
-                                        <input class="chec10" type="checkbox" name="gender" value="1.46">Enfermedad de kawasaki
+                                        <input class="chec10" type="checkbox" id="arrar10" name="gender" value="1.46">Enfermedad de kawasaki
                                         </div>                                        
                                         <br><br>
 
